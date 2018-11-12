@@ -24,3 +24,6 @@ https://www.jp.square-enix.com/WOFF/MAXIMA/
 * 任意の編集を行う
 * gamedataを書き出す
 * saveDataを書き戻す
+
+# Special Thanks
+* https://gbatemp.net/threads/world-of-final-fantasy-maxima-save-editor.522689/
