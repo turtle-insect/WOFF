@@ -7,6 +7,7 @@ namespace WOFF
 	{
 		private static Info mThis;
 		public List<NameValueInfo> Items { get; private set; } = new List<NameValueInfo>();
+		public List<NameValueInfo> Mirages { get; private set; } = new List<NameValueInfo>();
 
 		private Info() { }
 
@@ -38,6 +39,7 @@ namespace WOFF
 		private void Init()
 		{
 			AppendList("info\\item.txt", Items);
+			AppendList("info\\mirage.txt", Mirages);
 		}
 
 		private void AppendList<Type>(String filename, List<Type> items)

@@ -8,7 +8,7 @@ namespace WOFF
 		private static SaveData mThis;
 		private String mFileName = null;
 		private Byte[] mBuffer = null;
-		private readonly System.Text.Encoding mEncode = System.Text.Encoding.ASCII;
+		private readonly System.Text.Encoding mEncode = System.Text.Encoding.UTF8;
 		public uint Adventure { private get; set; } = 0;
 		private readonly uint[] mCheckSumAddress = 
 			{ 0, 0x90, 0x120, 0x1B0, 0x240, 0x2D0, 0x4E0, 0x570, 0x37580, 0x3B190, 0x3B220, 0x3B2B0, 0x3B6C0, 0x3B750, 0x3DB60, 0x3E770
@@ -136,6 +136,18 @@ namespace WOFF
 			for (uint i = 0; i < size; i++)
 			{
 				mBuffer[address + i] = tmp[i];
+			}
+		}
+
+		public void WriteValue(uint address, Byte[] buffer)
+		{
+			if (mBuffer == null) return;
+			address = CalcAddress(address);
+			if (address + buffer.Length > mBuffer.Length) return;
+
+			for (uint i = 0; i < buffer.Length; i++)
+			{
+				mBuffer[address + i] = buffer[i];
 			}
 		}
 

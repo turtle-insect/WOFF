@@ -49,8 +49,99 @@
                         <TextBox Grid.Column="1" Text="{Binding Money, UpdateSourceTrigger=PropertyChanged}"/>
                     </Grid>
                 </TabItem>
-                <TabItem Header="{x:Static properties:Resources.TabItemItems}">
-                    <ListBox ItemsSource="{Binding Items}">
+                <TabItem Header="{x:Static properties:Resources.TabCharactor}">
+                    <TabItem.Resources>
+                        <local:CharactorIDNameConvertor x:Key="CharactorIDNameConvertor"/>
+                    </TabItem.Resources>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <ListBox Name="ListBoxCharactor" ItemsSource="{Binding Charactors}" DisplayMemberPath="Name"/>
+                        <Grid Grid.Column="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition Height="11*"/>
+                            </Grid.RowDefinitions>
+                            <Label Content="ID"/>
+                            <DockPanel Grid.Column="1">
+                                <Button DockPanel.Dock="Right" Content="..." Click="ButtonMirage_Click"/>
+                                <Label Content="{Binding ElementName=ListBoxCharactor, Path=SelectedItem.ID, Converter={StaticResource CharactorIDNameConvertor}}"/>
+                            </DockPanel>
+                            <Label Grid.Row="1" Content="Name"/>
+                            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding ElementName=ListBoxCharactor, Path=SelectedItem.Name, UpdateSourceTrigger=PropertyChanged}"/>
+                            <Label Grid.Row="2" Content="Exp"/>
+                            <TextBox Grid.Row="2" Grid.Column="1" Text="{Binding ElementName=ListBoxCharactor, Path=SelectedItem.Exp, UpdateSourceTrigger=PropertyChanged}"/>
+                            <Label Grid.Row="3" Content="HP"/>
+                            <TextBox Grid.Row="3" Grid.Column="1" Text="{Binding ElementName=ListBoxCharactor, Path=SelectedItem.HP, UpdateSourceTrigger=PropertyChanged}"/>
+                            <Label Grid.Row="4" Content="AP"/>
+                            <TextBox Grid.Row="4" Grid.Column="1" Text="{Binding ElementName=ListBoxCharactor, Path=SelectedItem.AP, UpdateSourceTrigger=PropertyChanged}"/>
+                            <Label Grid.Row="5" Content="SP"/>
+                            <TextBox Grid.Row="5" Grid.Column="1" Text="{Binding ElementName=ListBoxCharactor, Path=SelectedItem.SP, UpdateSourceTrigger=PropertyChanged}"/>
+                        </Grid>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="{x:Static properties:Resources.TabItemParty}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition Height="5*"/>
+                        </Grid.RowDefinitions>
+                        <ComboBox ItemsSource="{Binding Charactors}" DisplayMemberPath="Name" SelectedIndex="{Binding Party[0].ID}"/>
+                        <ComboBox Grid.Row="1" ItemsSource="{Binding Charactors}" DisplayMemberPath="Name" SelectedIndex="{Binding Party[1].ID}"/>
+                        <ComboBox Grid.Row="2" ItemsSource="{Binding Charactors}" DisplayMemberPath="Name" SelectedIndex="{Binding Party[2].ID}"/>
+                        <ComboBox Grid.Row="3" ItemsSource="{Binding Charactors}" DisplayMemberPath="Name" SelectedIndex="{Binding Party[3].ID}"/>
+                        <ComboBox Grid.Row="4" ItemsSource="{Binding Charactors}" DisplayMemberPath="Name" SelectedIndex="{Binding Party[4].ID}"/>
+                        <ComboBox Grid.Row="5" ItemsSource="{Binding Charactors}" DisplayMemberPath="Name" SelectedIndex="{Binding Party[5].ID}"/>
+                        <ComboBox Grid.Row="6" ItemsSource="{Binding Charactors}" DisplayMemberPath="Name" SelectedIndex="{Binding Party[6].ID}"/>
+                        <ComboBox Grid.Row="7" ItemsSource="{Binding Charactors}" DisplayMemberPath="Name" SelectedIndex="{Binding Party[7].ID}"/>
+                        <ComboBox Grid.Row="8" ItemsSource="{Binding Charactors}" DisplayMemberPath="Name" SelectedIndex="{Binding Party[8].ID}"/>
+                        <ComboBox Grid.Row="9" ItemsSource="{Binding Charactors}" DisplayMemberPath="Name" SelectedIndex="{Binding Party[9].ID}"/>
+                        <ComboBox Grid.Row="10" ItemsSource="{Binding Charactors}" DisplayMemberPath="Name" SelectedIndex="{Binding Party[10].ID}"/>
+                        <ComboBox Grid.Row="11" ItemsSource="{Binding Charactors}" DisplayMemberPath="Name" SelectedIndex="{Binding Party[11].ID}"/>
+                    </Grid>
+                </TabItem>
+                <TabItem Header="{x:Static properties:Resources.TabItemBattleItems}">
+                    <ListBox ItemsSource="{Binding BattleItems}">
+                        <ListBox.Resources>
+                            <local:ItemIDNameConverter x:Key="ItemIDNameConverter"/>
+                        </ListBox.Resources>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Count : "/>
+                                    <TextBox Text="{Binding Count, UpdateSourceTrigger=PropertyChanged}" Width="80"/>
+                                    <Button Content="..." Click="ButtonItem_Click"/>
+                                    <Label Content="{Binding ID, Converter={StaticResource ItemIDNameConverter}}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </TabItem>
+                <TabItem Header="{x:Static properties:Resources.TabItemOtherItems}">
+                    <ListBox ItemsSource="{Binding OtherItems}">
                         <ListBox.Resources>
                             <local:ItemIDNameConverter x:Key="ItemIDNameConverter"/>
                         </ListBox.Resources>

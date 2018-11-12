@@ -205,6 +205,15 @@ namespace WOFF.Properties {
         }
         
         /// <summary>
+        ///   Charactor に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabCharactor {
+            get {
+                return ResourceManager.GetString("TabCharactor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Basic に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string TabItemBasic {
@@ -214,11 +223,29 @@ namespace WOFF.Properties {
         }
         
         /// <summary>
-        ///   Items に類似しているローカライズされた文字列を検索します。
+        ///   BattleItems に類似しているローカライズされた文字列を検索します。
         /// </summary>
-        public static string TabItemItems {
+        public static string TabItemBattleItems {
             get {
-                return ResourceManager.GetString("TabItemItems", resourceCulture);
+                return ResourceManager.GetString("TabItemBattleItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   OtherItems に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemOtherItems {
+            get {
+                return ResourceManager.GetString("TabItemOtherItems", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Party に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemParty {
+            get {
+                return ResourceManager.GetString("TabItemParty", resourceCulture);
             }
         }
         

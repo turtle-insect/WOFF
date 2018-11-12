@@ -165,11 +165,20 @@
   <data name="MessageSaveSuccess" xml:space="preserve">
     <value>書込成功</value>
   </data>
+  <data name="TabCharactor" xml:space="preserve">
+    <value>人物</value>
+  </data>
   <data name="TabItemBasic" xml:space="preserve">
     <value>基本情報</value>
   </data>
-  <data name="TabItemItems" xml:space="preserve">
-    <value>アイテム</value>
+  <data name="TabItemBattleItems" xml:space="preserve">
+    <value>バトルアイテム</value>
+  </data>
+  <data name="TabItemOtherItems" xml:space="preserve">
+    <value>他アイテム</value>
+  </data>
+  <data name="TabItemParty" xml:space="preserve">
+    <value>パーティー</value>
   </data>
   <data name="ToolTipOpen" xml:space="preserve">
     <value>開く</value>

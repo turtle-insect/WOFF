@@ -90,12 +90,30 @@ namespace WOFF
 		{
 			Item item = (sender as Button)?.DataContext as Item;
 			if (item == null) return;
+
 			var window = new ChoiceWindow();
 			window.ID = item.ID;
 			window.ShowDialog();
 			item.ID = window.ID;
-			if (item.ID == 0xFFFFFFFF) item.Count = 0;
+			if (item.ID == Util.NONE) item.Count = 0;
 			else if (item.Count == 0) item.Count = 1;
+		}
+
+		private void ButtonMirage_Click(object sender, RoutedEventArgs e)
+		{
+			var charactor = ListBoxCharactor.SelectedItem as Charactor;
+			if (charactor == null) return;
+
+			var window = new ChoiceWindow();
+			window.Type = ChoiceWindow.eType.mirage;
+			window.ID = charactor.ID;
+			window.ShowDialog();
+			if(charactor.ID != window.ID)
+			{
+				Util.InitCharactor(charactor.Address);
+				charactor.Clear();
+			}
+			charactor.ID = window.ID;
 		}
 
 		private void Init()

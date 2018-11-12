@@ -24,6 +24,7 @@ namespace WOFF
 		public enum eType
 		{
 			item,
+			mirage,
 		};
 		public eType Type { private get; set; } = eType.item;
 
@@ -69,6 +70,7 @@ namespace WOFF
 		{
 			ListBoxItem.Items.Clear();
 			List<NameValueInfo> items = Info.Instance().Items;
+			if(Type == eType.mirage) items = Info.Instance().Mirages;
 
 			foreach (var item in items)
 			{
