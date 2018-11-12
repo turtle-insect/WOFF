@@ -50,7 +50,21 @@
                     </Grid>
                 </TabItem>
                 <TabItem Header="{x:Static properties:Resources.TabItemItems}">
-
+                    <ListBox ItemsSource="{Binding Items}">
+                        <ListBox.Resources>
+                            <local:ItemIDNameConverter x:Key="ItemIDNameConverter"/>
+                        </ListBox.Resources>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Count : "/>
+                                    <TextBox Text="{Binding Count, UpdateSourceTrigger=PropertyChanged}" Width="80"/>
+                                    <Button Content="..." Click="ButtonItem_Click"/>
+                                    <Label Content="{Binding ID, Converter={StaticResource ItemIDNameConverter}}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
                 </TabItem>
             </TabControl>
         </DockPanel>

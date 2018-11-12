@@ -73,7 +73,7 @@ namespace WOFF
 
 		private void MenuItemAbout_Click(object sender, RoutedEventArgs e)
 		{
-			//new AboutWindow().ShowDialog();
+			new AboutWindow().ShowDialog();
 		}
 
 		private void ToolBarFileOpen_Click(object sender, RoutedEventArgs e)
@@ -84,6 +84,18 @@ namespace WOFF
 		private void ToolBarFileSave_Click(object sender, RoutedEventArgs e)
 		{
 			Save();
+		}
+
+		private void ButtonItem_Click(object sender, RoutedEventArgs e)
+		{
+			Item item = (sender as Button)?.DataContext as Item;
+			if (item == null) return;
+			var window = new ChoiceWindow();
+			window.ID = item.ID;
+			window.ShowDialog();
+			item.ID = window.ID;
+			if (item.ID == 0xFFFFFFFF) item.Count = 0;
+			else if (item.Count == 0) item.Count = 1;
 		}
 
 		private void Init()

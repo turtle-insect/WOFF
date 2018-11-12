@@ -61,6 +61,42 @@ namespace WOFF.Properties {
         }
         
         /// <summary>
+        ///   Cancel に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ChoiceCancel {
+            get {
+                return ResourceManager.GetString("ChoiceCancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Filter に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ChoiceFilter {
+            get {
+                return ResourceManager.GetString("ChoiceFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   OK に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ChoiceOK {
+            get {
+                return ResourceManager.GetString("ChoiceOK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Choice に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ChoiceTitle {
+            get {
+                return ResourceManager.GetString("ChoiceTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   WORLD OF FINAL FANTASY SaveDataEditor(Nintendo Switch) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string MainWindowTitle {
