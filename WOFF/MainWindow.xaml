@@ -157,6 +157,18 @@
                         </ListBox.ItemTemplate>
                     </ListBox>
                 </TabItem>
+                <TabItem Header="{x:Static properties:Resources.TabItemMedal}">
+                    <ListBox ItemsSource="{Binding Medals}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox VerticalAlignment="Center" IsChecked="{Binding Buy}"/>
+                                    <Label Content="{Binding Name}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </TabItem>
             </TabControl>
         </DockPanel>
     </Grid>
