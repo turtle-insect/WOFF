@@ -73,10 +73,10 @@ namespace WOFF
 
 		public String Name
 		{
-			get { return SaveData.Instance().ReadText(mAddress + 16, 18); }
+			get { return SaveData.Instance().ReadText(mAddress + 16, 30); }
 			set
 			{
-				SaveData.Instance().WriteText(mAddress + 16, 18, value);
+				SaveData.Instance().WriteText(mAddress + 16, 30, value);
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Name)));
 			}
 		}

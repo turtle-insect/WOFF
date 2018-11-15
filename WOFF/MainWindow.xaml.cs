@@ -99,6 +99,20 @@ namespace WOFF
 			else if (item.Count == 0) item.Count = 1;
 		}
 
+		private void ButtonJewel_Click(object sender, RoutedEventArgs e)
+		{
+			Jewel jewel = (sender as Button)?.DataContext as Jewel;
+			if (jewel == null) return;
+
+			var window = new ChoiceWindow();
+			window.Type = ChoiceWindow.eType.jewel;
+			window.ID = jewel.ID;
+			window.ShowDialog();
+			jewel.ID = window.ID;
+			if (jewel.ID == Util.NONE) jewel.Count = 0;
+			else if (jewel.Count == 0) jewel.Count = 1;
+		}
+
 		private void ButtonMirage_Click(object sender, RoutedEventArgs e)
 		{
 			var charactor = ListBoxCharactor.SelectedItem as Charactor;

@@ -232,6 +232,15 @@ namespace WOFF.Properties {
         }
         
         /// <summary>
+        ///   Jewel に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemJewel {
+            get {
+                return ResourceManager.GetString("TabItemJewel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Medal に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string TabItemMedal {

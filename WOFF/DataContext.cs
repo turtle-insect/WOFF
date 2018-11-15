@@ -14,6 +14,7 @@ namespace WOFF
 		public ObservableCollection<Charactor> Charactors { get; set; } = new ObservableCollection<Charactor>();
 		public ObservableCollection<Member> Party { get; set; } = new ObservableCollection<Member>();
 		public ObservableCollection<Medal> Medals { get; set; } = new ObservableCollection<Medal>();
+		public ObservableCollection<Jewel> Jewels { get; set; } = new ObservableCollection<Jewel>();
 
 		public DataContext()
 		{
@@ -30,6 +31,11 @@ namespace WOFF
 			for (uint i = 0; i < 200; i++)
 			{
 				Charactors.Add(new Charactor(0x700 + i * 1062));
+			}
+
+			for (uint i = 0; i < 120; i++)
+			{
+				Jewels.Add(new Jewel(0x46380 + i * 8));
 			}
 
 			for (uint i = 0; i < 12; i++)

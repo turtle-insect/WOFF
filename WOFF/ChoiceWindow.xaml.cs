@@ -25,6 +25,7 @@ namespace WOFF
 		{
 			item,
 			mirage,
+			jewel,
 		};
 		public eType Type { private get; set; } = eType.item;
 
@@ -70,7 +71,17 @@ namespace WOFF
 		{
 			ListBoxItem.Items.Clear();
 			List<NameValueInfo> items = Info.Instance().Items;
-			if(Type == eType.mirage) items = Info.Instance().Mirages;
+
+			switch(Type)
+			{
+				case eType.jewel:
+					items = Info.Instance().Jewels;
+					break;
+
+				case eType.mirage:
+					items = Info.Instance().Mirages;
+					break;
+			}
 
 			foreach (var item in items)
 			{

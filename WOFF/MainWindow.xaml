@@ -169,6 +169,23 @@
                         </ListBox.ItemTemplate>
                     </ListBox>
                 </TabItem>
+                <TabItem Header="{x:Static properties:Resources.TabItemJewel}">
+                    <ListBox ItemsSource="{Binding Jewels}">
+                        <ListBox.Resources>
+                            <local:JewelIDNameConverter x:Key="JewelIDNameConverter"/>
+                        </ListBox.Resources>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label Content="Count : "/>
+                                    <TextBox Text="{Binding Count, UpdateSourceTrigger=PropertyChanged}" Width="80"/>
+                                    <Button Content="..." Click="ButtonJewel_Click"/>
+                                    <Label Content="{Binding ID, Converter={StaticResource JewelIDNameConverter}}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </TabItem>
             </TabControl>
         </DockPanel>
     </Grid>

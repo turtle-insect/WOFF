@@ -7,32 +7,32 @@ using System.ComponentModel;
 
 namespace WOFF
 {
-	class Item : INotifyPropertyChanged
+    class Jewel : INotifyPropertyChanged
 	{
 		private readonly uint mAddress;
 		public event PropertyChangedEventHandler PropertyChanged;
 
-		public Item(uint address)
+		public Jewel(uint address)
 		{
 			mAddress = address;
 		}
 
 		public uint ID
 		{
-			get { return SaveData.Instance().ReadNumber(mAddress, 4); }
+			get { return SaveData.Instance().ReadNumber(mAddress + 4, 4); }
 			set
 			{
-				SaveData.Instance().WriteNumber(mAddress, 4, value);
+				SaveData.Instance().WriteNumber(mAddress + 4, 4, value);
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ID)));
 			}
 		}
 
 		public uint Count
 		{
-			get { return SaveData.Instance().ReadNumber(mAddress + 4, 2); }
+			get { return SaveData.Instance().ReadNumber(mAddress, 2); }
 			set
 			{
-				Util.WriteNumber(mAddress + 4, 2, value, 0, 99);
+				Util.WriteNumber(mAddress, 2, value, 0, 99);
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Count)));
 			}
 		}
