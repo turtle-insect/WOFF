@@ -72,6 +72,7 @@
     <Compile Include="JewelIDNameConverter.cs" />
     <Compile Include="Medal.cs" />
     <Compile Include="Member.cs" />
+    <Compile Include="MindQuest.cs" />
     <Compile Include="NameValueInfo.cs" />
     <Compile Include="SaveData.cs" />
     <Compile Include="Util.cs" />

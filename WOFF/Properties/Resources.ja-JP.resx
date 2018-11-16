@@ -129,6 +129,18 @@
   <data name="ChoiceTitle" xml:space="preserve">
     <value>選択</value>
   </data>
+  <data name="ComboBoxMindClear" xml:space="preserve">
+    <value>クリア</value>
+  </data>
+  <data name="ComboBoxMindDone" xml:space="preserve">
+    <value>終了</value>
+  </data>
+  <data name="ComboBoxMindNone" xml:space="preserve">
+    <value>非表示</value>
+  </data>
+  <data name="ComboBoxMindVisible" xml:space="preserve">
+    <value>表示</value>
+  </data>
   <data name="MainWindowTitle" xml:space="preserve">
     <value>WORLD OF FINAL FANTASY セーブデータ改造(Nintendo Switch)</value>
   </data>
@@ -179,6 +191,9 @@
   </data>
   <data name="TabItemMedal" xml:space="preserve">
     <value>メダル</value>
+  </data>
+  <data name="TabItemMind" xml:space="preserve">
+    <value>ココロクエスト</value>
   </data>
   <data name="TabItemOtherItems" xml:space="preserve">
     <value>他アイテム</value>

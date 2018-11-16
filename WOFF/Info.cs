@@ -10,6 +10,7 @@ namespace WOFF
 		public List<NameValueInfo> Mirages { get; private set; } = new List<NameValueInfo>();
 		public List<NameValueInfo> Medals { get; private set; } = new List<NameValueInfo>();
 		public List<NameValueInfo> Jewels { get; private set; } = new List<NameValueInfo>();
+		public List<NameValueInfo> Minds { get; private set; } = new List<NameValueInfo>();
 
 		private Info() { }
 
@@ -44,6 +45,7 @@ namespace WOFF
 			AppendList("info\\mirage.txt", Mirages);
 			AppendList("info\\medal.txt", Medals);
 			AppendList("info\\jewel.txt", Jewels);
+			AppendList("info\\mind.txt", Minds);
 		}
 
 		private void AppendList<Type>(String filename, List<Type> items)

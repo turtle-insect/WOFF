@@ -97,6 +97,42 @@ namespace WOFF.Properties {
         }
         
         /// <summary>
+        ///   Clear に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ComboBoxMindClear {
+            get {
+                return ResourceManager.GetString("ComboBoxMindClear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Done に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ComboBoxMindDone {
+            get {
+                return ResourceManager.GetString("ComboBoxMindDone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   None に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ComboBoxMindNone {
+            get {
+                return ResourceManager.GetString("ComboBoxMindNone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Visible に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string ComboBoxMindVisible {
+            get {
+                return ResourceManager.GetString("ComboBoxMindVisible", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   WORLD OF FINAL FANTASY SaveDataEditor(Nintendo Switch) に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string MainWindowTitle {
@@ -246,6 +282,15 @@ namespace WOFF.Properties {
         public static string TabItemMedal {
             get {
                 return ResourceManager.GetString("TabItemMedal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   MindQuest に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemMind {
+            get {
+                return ResourceManager.GetString("TabItemMind", resourceCulture);
             }
         }
         

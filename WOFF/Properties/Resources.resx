@@ -129,6 +129,18 @@
   <data name="ChoiceTitle" xml:space="preserve">
     <value>Choice</value>
   </data>
+  <data name="ComboBoxMindClear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="ComboBoxMindDone" xml:space="preserve">
+    <value>Done</value>
+  </data>
+  <data name="ComboBoxMindNone" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="ComboBoxMindVisible" xml:space="preserve">
+    <value>Visible</value>
+  </data>
   <data name="MainWindowTitle" xml:space="preserve">
     <value>WORLD OF FINAL FANTASY SaveDataEditor(Nintendo Switch)</value>
   </data>
@@ -179,6 +191,9 @@
   </data>
   <data name="TabItemMedal" xml:space="preserve">
     <value>Medal</value>
+  </data>
+  <data name="TabItemMind" xml:space="preserve">
+    <value>MindQuest</value>
   </data>
   <data name="TabItemOtherItems" xml:space="preserve">
     <value>OtherItems</value>

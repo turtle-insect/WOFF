@@ -186,6 +186,23 @@
                         </ListBox.ItemTemplate>
                     </ListBox>
                 </TabItem>
+                <TabItem Header="{x:Static properties:Resources.TabItemMind}">
+                    <ListBox ItemsSource="{Binding Minds}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <ComboBox SelectedIndex="{Binding Status}">
+                                        <ComboBoxItem Content="{x:Static properties:Resources.ComboBoxMindNone}"/>
+                                        <ComboBoxItem Content="{x:Static properties:Resources.ComboBoxMindVisible}"/>
+                                        <ComboBoxItem Content="{x:Static properties:Resources.ComboBoxMindClear}"/>
+                                        <ComboBoxItem Content="{x:Static properties:Resources.ComboBoxMindDone}"/>
+                                    </ComboBox>
+                                    <Label Content="{Binding Name}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </TabItem>
             </TabControl>
         </DockPanel>
     </Grid>
