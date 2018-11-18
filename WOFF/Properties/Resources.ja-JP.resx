@@ -201,6 +201,9 @@
   <data name="TabItemParty" xml:space="preserve">
     <value>パーティー</value>
   </data>
+  <data name="TabItemPlace" xml:space="preserve">
+    <value>場所</value>
+  </data>
   <data name="ToolTipOpen" xml:space="preserve">
     <value>開く</value>
   </data>

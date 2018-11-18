@@ -191,12 +191,24 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
-                                    <ComboBox SelectedIndex="{Binding Status}">
+                                    <ComboBox SelectedIndex="{Binding Status}" Width="80">
                                         <ComboBoxItem Content="{x:Static properties:Resources.ComboBoxMindNone}"/>
                                         <ComboBoxItem Content="{x:Static properties:Resources.ComboBoxMindVisible}"/>
                                         <ComboBoxItem Content="{x:Static properties:Resources.ComboBoxMindClear}"/>
                                         <ComboBoxItem Content="{x:Static properties:Resources.ComboBoxMindDone}"/>
                                     </ComboBox>
+                                    <Label Content="{Binding Name}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </TabItem>
+                <TabItem Header="{x:Static properties:Resources.TabItemPlace}">
+                    <ListBox ItemsSource="{Binding Places}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox VerticalAlignment="Center" IsChecked="{Binding Visit}"/>
                                     <Label Content="{Binding Name}"/>
                                 </StackPanel>
                             </DataTemplate>

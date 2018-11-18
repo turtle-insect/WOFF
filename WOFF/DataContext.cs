@@ -15,6 +15,7 @@ namespace WOFF
 		public ObservableCollection<Member> Party { get; set; } = new ObservableCollection<Member>();
 		public ObservableCollection<Medal> Medals { get; set; } = new ObservableCollection<Medal>();
 		public ObservableCollection<Jewel> Jewels { get; set; } = new ObservableCollection<Jewel>();
+		public ObservableCollection<Place> Places { get; set; } = new ObservableCollection<Place>();
 		public ObservableCollection<MindQuest> Minds { get; set; } = new ObservableCollection<MindQuest>();
 
 		public DataContext()
@@ -44,7 +45,12 @@ namespace WOFF
 				Party.Add(new Member(0x6D0 + i * 4));
 			}
 
-			foreach(var info in Info.Instance().Minds)
+			foreach (var info in Info.Instance().Places)
+			{
+				Places.Add(new Place(info));
+			}
+
+			foreach (var info in Info.Instance().Minds)
 			{
 				Minds.Add(new MindQuest(info));
 			}

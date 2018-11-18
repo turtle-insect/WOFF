@@ -74,6 +74,7 @@
     <Compile Include="Member.cs" />
     <Compile Include="MindQuest.cs" />
     <Compile Include="NameValueInfo.cs" />
+    <Compile Include="Place.cs" />
     <Compile Include="SaveData.cs" />
     <Compile Include="Util.cs" />
     <Page Include="AboutWindow.xaml">

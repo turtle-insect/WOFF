@@ -313,6 +313,15 @@ namespace WOFF.Properties {
         }
         
         /// <summary>
+        ///   Place に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string TabItemPlace {
+            get {
+                return ResourceManager.GetString("TabItemPlace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Open に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string ToolTipOpen {
