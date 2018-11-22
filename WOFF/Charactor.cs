@@ -46,7 +46,7 @@ namespace WOFF
 			get { return SaveData.Instance().ReadNumber(mAddress + 4, 4); }
 			set
 			{
-				Util.WriteNumber(mAddress + 4, 4, value, 0, 9999999);
+				Util.WriteNumber(mAddress + 4, 4, value, 0, 10881386);
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Exp)));
 			}
 		}
