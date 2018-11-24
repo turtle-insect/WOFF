@@ -76,6 +76,18 @@ namespace WOFF
 			new AboutWindow().ShowDialog();
 		}
 
+		private void MenuItemMaxCount_Click(object sender, RoutedEventArgs e)
+		{
+			DataContext data = DataContext as DataContext;
+			if (data == null) return;
+
+			foreach (var item in data.BattleItems)
+			{
+				if (item.ID == Util.NONE) continue;
+				item.Count = Util.ITEM_MAX;
+			}
+		}
+
 		private void ToolBarFileOpen_Click(object sender, RoutedEventArgs e)
 		{
 			Load(false);

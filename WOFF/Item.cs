@@ -32,7 +32,7 @@ namespace WOFF
 			get { return SaveData.Instance().ReadNumber(mAddress + 4, 2); }
 			set
 			{
-				Util.WriteNumber(mAddress + 4, 2, value, 0, 99);
+				Util.WriteNumber(mAddress + 4, 2, value, 0, Util.ITEM_MAX);
 				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Count)));
 			}
 		}

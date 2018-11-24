@@ -8,7 +8,8 @@ namespace WOFF
 {
 	class Util
 	{
-		public const uint NONE = 0xFFFFFFFF; 
+		public const uint NONE = 0xFFFFFFFF;
+		public const uint ITEM_MAX = 99;
 
 		public static void WriteNumber(uint address, uint size, uint value, uint min, uint max)
 		{

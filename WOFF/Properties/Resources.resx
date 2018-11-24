@@ -165,6 +165,9 @@
   <data name="MenuFileSaveAs" xml:space="preserve">
     <value>Save(_A)s...</value>
   </data>
+  <data name="MenuMaxCount" xml:space="preserve">
+    <value>Max</value>
+  </data>
   <data name="MessageLoadFail" xml:space="preserve">
     <value>Load Fail</value>
   </data>

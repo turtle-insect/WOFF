@@ -205,6 +205,15 @@ namespace WOFF.Properties {
         }
         
         /// <summary>
+        ///   Max に類似しているローカライズされた文字列を検索します。
+        /// </summary>
+        public static string MenuMaxCount {
+            get {
+                return ResourceManager.GetString("MenuMaxCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Load Fail に類似しているローカライズされた文字列を検索します。
         /// </summary>
         public static string MessageLoadFail {

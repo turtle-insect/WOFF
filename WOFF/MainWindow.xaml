@@ -128,6 +128,11 @@
                         <ListBox.Resources>
                             <local:ItemIDNameConverter x:Key="ItemIDNameConverter"/>
                         </ListBox.Resources>
+                        <ListBox.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="{x:Static properties:Resources.MenuMaxCount}" Click="MenuItemMaxCount_Click"/>
+                            </ContextMenu>
+                        </ListBox.ContextMenu>
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Orientation="Horizontal">
