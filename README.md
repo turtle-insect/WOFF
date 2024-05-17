@@ -14,7 +14,7 @@ https://www.jp.square-enix.com/WOFF/MAXIMA/
 
 # Build環境
 * Windows 10(64bit)
-* Visual Studio 2017
+* Visual Studio 2022
 
 # 編集時の手順
 * saveDataを吸い出す
